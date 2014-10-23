@@ -22,7 +22,6 @@ var students = dataSource
 
 #### Retrieve a single value
 ```C#
-// Retrieve a single value
 var firstId = dataSource.ExecuteScalar<int>("SELECT TOP 1 id FROM Students");
 ```
 
