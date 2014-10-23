@@ -20,6 +20,8 @@ var students = dataSource
   });
 ```
 
+N.B. The query passed to Execute won't run against the server until the returned sequence is iterated over. If you need it to run immediately, call .ToList() on the results. Conversely, repeatedly iterating over the results will repeat the query. This can be useful for uncacheable data!
+
 #### Retrieve a single value
 ```C#
 var firstId = dataSource.ExecuteScalar<int>("SELECT TOP 1 id FROM Students");
