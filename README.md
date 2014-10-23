@@ -21,13 +21,13 @@ var students = dataSource
 ```
 
 #### Retrieve a single value
-```
+```C#
 // Retrieve a single value
 var firstId = dataSource.ExecuteScalar<int>("SELECT TOP 1 id FROM Students");
 ```
 
 #### Execute a statement
-```
+```C#
 var rowsAffected = dataSource.ExecuteNonQuery("DROP TABLE Students");
 ```
 
@@ -44,7 +44,7 @@ var propertyDescription = someObject.SomeProperty.GetDescription();
 ```
 
 #### Convert a string to an enum based on the description attribute or its name
-```
+```C#
 var activeStatus = "a".ToEnum<ProductStatus>();
 
 var inactiveStatus = "Inactive".ToEnum<ProductStatus>();
@@ -64,7 +64,7 @@ public enum ProductStatus
 ```
 
 #### Hash a password (base 64 encoded SHA1 hash)
-```
+```C#
 var password = "MySecretPassword";
 var hashedPassword = password.HashPassword(); // returns "lScpxhyrfgHktfW6e5WDDSB190s="
 ```
