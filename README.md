@@ -11,7 +11,7 @@ var dataSource = new MsSqlDataSource("Server=serverAddress;Database=database;Tru
 
 var students = dataSource
   .Execute("SELECT * FROM Students")
-  .Select(s => {
+  .Select(s =>
     new Student(
       s.GetValueOrDefault<int>("id"),
       s.GetValueOrDefault<string>("name"),
