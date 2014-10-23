@@ -55,6 +55,7 @@
     <Compile Include="Database\MsSqlDataSource.cs" />
     <Compile Include="Database\MySqlDataSource.cs" />
     <Compile Include="Database\PrepopulatedDataRecord.cs" />
+    <Compile Include="Extensions\DataRecordExtensions.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
