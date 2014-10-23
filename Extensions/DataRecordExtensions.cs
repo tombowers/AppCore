@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 
-namespace RR.Core.Extensions
+namespace AppCore.Extensions
 {
 	public static class DataRecordExtensions
 	{
