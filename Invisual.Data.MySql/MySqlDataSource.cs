@@ -1,4 +1,5 @@
-﻿using AppCore.Extensions;
+﻿using Invisual.AppCore.Database;
+using Invisual.AppCore.Extensions;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 
-namespace AppCore.Database
+namespace Invisual.Data
 {
 	public class MySqlDataSource : ISqlDataSource
 	{

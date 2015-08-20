@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace AppCore.Database
+namespace Invisual.AppCore.Database
 {
 	public interface ISqlDataSource
 	{

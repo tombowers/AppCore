@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Linq;
 
-namespace AppCore.Extensions
+namespace Invisual.AppCore.Extensions
 {
 	public static class ObjectExtensions
 	{

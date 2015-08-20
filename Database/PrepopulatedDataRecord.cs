@@ -4,7 +4,7 @@ using System.Collections.Specialized;
 using System.Data;
 using System.Linq;
 
-namespace AppCore.Database
+namespace Invisual.AppCore.Database
 {
 	public class PrepopulatedDataRecord : IDataRecord
 	{

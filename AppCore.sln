@@ -1,7 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCore", "AppCore.csproj", "{F27C8D2C-292A-4AB7-BD0F-B4F4A8F8B814}"
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisual.AppCore", "Invisual.AppCore.csproj", "{F27C8D2C-292A-4AB7-BD0F-B4F4A8F8B814}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisual.Data.SqlServer", "..\Invisual.Data.SqlServer\Invisual.Data.SqlServer.csproj", "{DCE4CA35-D4B9-4D24-A338-5C85D9308349}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisual.Data.MySql", "Invisual.Data.MySql\Invisual.Data.MySql.csproj", "{845DBA57-CCDE-4DA1-B869-F4AF44534180}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +19,14 @@ Global
 		{F27C8D2C-292A-4AB7-BD0F-B4F4A8F8B814}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F27C8D2C-292A-4AB7-BD0F-B4F4A8F8B814}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F27C8D2C-292A-4AB7-BD0F-B4F4A8F8B814}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCE4CA35-D4B9-4D24-A338-5C85D9308349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE4CA35-D4B9-4D24-A338-5C85D9308349}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCE4CA35-D4B9-4D24-A338-5C85D9308349}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCE4CA35-D4B9-4D24-A338-5C85D9308349}.Release|Any CPU.Build.0 = Release|Any CPU
+		{845DBA57-CCDE-4DA1-B869-F4AF44534180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{845DBA57-CCDE-4DA1-B869-F4AF44534180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{845DBA57-CCDE-4DA1-B869-F4AF44534180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{845DBA57-CCDE-4DA1-B869-F4AF44534180}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

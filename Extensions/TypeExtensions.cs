@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 
-namespace AppCore.Extensions
+namespace Invisual.AppCore.Extensions
 {
 	public static class TypeExtensions
 	{

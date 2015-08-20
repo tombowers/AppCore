@@ -3,7 +3,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace AppCore.Extensions
+namespace Invisual.AppCore.Extensions
 {
 	public static class StringExtensions
 	{
