@@ -2,8 +2,16 @@
 
 AppCore is a lightweight .Net library for simplifying common operations, and speeding up development.
 
-
 ### Easy database access for Sql Server and MySql.
+
+#### Installation
+There are Nuget packages available for both SQL Server and MySQL. Use one of the following commands in your Nuget package manager console.
+
+`Install-Package Invisual.Data.SqlServer`
+
+or
+
+`Install-Package Invisual.Data.MySql`
 
 #### Prepare a select query and process the results into a collection of objects
 ```C#
@@ -64,9 +72,10 @@ public enum ProductStatus
 ...
 ```
 
-#### Hash a password (base 64 encoded SHA1 hash)
+#### Hash a string (base64 encoded SHA1 hash)
+N.B. Shouldn't be used for passwords, which should be salted, and use a more cryptographically secure hashing algorithm.
 ```C#
-var password = "MySecretPassword";
-var hashedPassword = password.HashPassword(); // returns "lScpxhyrfgHktfW6e5WDDSB190s="
+var plain = "MySecretPassword";
+var hashed = plain.HashPassword(); // returns "lScpxhyrfgHktfW6e5WDDSB190s="
 ```
 
