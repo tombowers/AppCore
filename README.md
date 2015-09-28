@@ -28,6 +28,14 @@ var students = dataSource
   });
 ```
 
+The above code needs the following using statements.
+
+```C#
+using System.Linq; // For .Select()
+using Invisual.Data; // Contains MsSqlDataSource;
+using Invisual.AppCore.Extensions; // Contains GetValueOrDefault<T>()
+```
+
 N.B. The query passed to Execute won't run against the server until the returned sequence is iterated over. If you need it to run immediately, call .ToList() on the results. Conversely, repeatedly iterating over the results will repeat the query. This can be useful for uncacheable data!
 
 #### Retrieve a single value
