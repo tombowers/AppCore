@@ -3,7 +3,7 @@
   <metadata>
     <id>Invisual.Data.SqlServer</id>
     <version>2.0.5710.15978</version>
-    <title>Sql Server Data Connector</title>
+    <title>Invisual Sql Server Data Connector</title>
     <authors>Tom Bowers</authors>
     <owners>Invisual</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -14,5 +14,6 @@
 	<dependencies>
 	  <dependency id="Invisual.AppCore" version="2.0.5710.15977" />
     </dependencies>
+	<tags>AppCore Sql</tags>
   </metadata>
 </package>

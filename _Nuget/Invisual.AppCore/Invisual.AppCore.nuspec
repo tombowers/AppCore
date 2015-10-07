@@ -11,5 +11,6 @@
 	<projectUrl>https://github.com/tombowers/AppCore</projectUrl>
     <description>Core library containing useful interfaces and extensions.</description>
     <copyright>Copyright © 2015</copyright>
+	<tags>AppCore</tags>
   </metadata>
 </package>
