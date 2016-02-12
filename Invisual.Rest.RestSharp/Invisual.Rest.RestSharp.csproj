@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DCE4CA35-D4B9-4D24-A338-5C85D9308349}</ProjectGuid>
+    <ProjectGuid>{1A998805-00A5-4095-825F-65FFCE28ABD1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Invisual.Data.SqlServer</RootNamespace>
-    <AssemblyName>Invisual.Data.SqlServer</AssemblyName>
+    <RootNamespace>Invisual.Rest.RestSharp</RootNamespace>
+    <AssemblyName>Invisual.Rest.RestSharp</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,10 +29,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="RestSharp, Version=105.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,16 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MsSqlDataSource.cs" />
+    <Compile Include="Authenticators\OAuth2QuerystringAuthenticator.cs" />
+    <Compile Include="BasicHttpAuthRestSharpClient.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="RestSharpClient.cs" />
+    <Compile Include="OAuth2UriQueryParamRestSharpClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Invisual.AppCore\Invisual.AppCore.csproj">
-      <Project>{f27c8d2c-292a-4ab7-bd0f-b4f4a8f8b814}</Project>
-      <Name>Invisual.AppCore</Name>
+    <ProjectReference Include="..\Invisual.Rest\Invisual.Rest.csproj">
+      <Project>{de97169e-674a-4ccb-9d19-d35829c78834}</Project>
+      <Name>Invisual.Rest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Invisual.Serialization\Invisual.Serialization.csproj">
+      <Project>{94c2bbe2-8420-4746-86ab-60f507465775}</Project>
+      <Name>Invisual.Serialization</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

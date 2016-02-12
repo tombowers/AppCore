@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DCE4CA35-D4B9-4D24-A338-5C85D9308349}</ProjectGuid>
+    <ProjectGuid>{D1552CF5-12AD-40D1-A2F2-538BE80570B8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Invisual.Data.SqlServer</RootNamespace>
-    <AssemblyName>Invisual.Data.SqlServer</AssemblyName>
+    <RootNamespace>Invisual.Serialization.Json.Net</RootNamespace>
+    <AssemblyName>Invisual.Serialization.Json.Net</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,10 +29,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,16 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MsSqlDataSource.cs" />
+    <Compile Include="ContractResolvers\CamelCaseResolver.cs" />
+    <Compile Include="ContractResolvers\DefaultResolver.cs" />
+    <Compile Include="Converters\CustomValueEnumJsonConverter.cs" />
+    <Compile Include="Converters\UnixTimestampJsonConverter.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="JsonSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Invisual.AppCore\Invisual.AppCore.csproj">
       <Project>{f27c8d2c-292a-4ab7-bd0f-b4f4a8f8b814}</Project>
       <Name>Invisual.AppCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Invisual.Serialization\Invisual.Serialization.csproj">
+      <Project>{94c2bbe2-8420-4746-86ab-60f507465775}</Project>
+      <Name>Invisual.Serialization</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -27,7 +27,7 @@ namespace Invisual.AppCore.Extensions
 		/// <summary>
 		/// Computes an SHA1 hash and converts it to Base 64
 		/// </summary>
-		public static string HashPassword(this string input)
+		public static string Sha1Base64Hash(this string input)
 		{
 			if (string.IsNullOrWhiteSpace(input))
 				throw new ArgumentException("input must not be null, empty, or whitespace");

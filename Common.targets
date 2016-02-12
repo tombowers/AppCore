@@ -1,0 +1,9 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="AfterBuild" Condition="'$(Configuration)'=='Release'">
+    <Exec Command="
+        cd ..\
+        nuget pack $(MSBuildProjectFullPath) -Prop Configuration=Release -IncludeReferencedProjects
+        ">
+	</Exec>
+  </Target>
+</Project>

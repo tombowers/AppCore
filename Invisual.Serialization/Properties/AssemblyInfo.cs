@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Invisual Sql Server Data Connector")]
-[assembly: AssemblyDescription("Simple enumerable Sql Server data access.")]
+[assembly: AssemblyTitle("Invisual Serialization Base Library")]
+[assembly: AssemblyDescription("Common library for Invisual Serialization.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Invisual")]
-[assembly: AssemblyProduct("Invisual.Data.SqlServer")]
+[assembly: AssemblyProduct("Invisual.Serialization")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fc048555-467d-4063-beaa-60e6a668766b")]
+[assembly: Guid("02599e7c-75bd-4d9b-8c54-4c608093632f")]
 
 // Version information for an assembly consists of the following four values:
 //

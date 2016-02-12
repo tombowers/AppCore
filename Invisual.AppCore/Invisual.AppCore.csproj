@@ -42,9 +42,16 @@
     <Compile Include="Database\ISqlDataSource.cs" />
     <Compile Include="Database\PrepopulatedDataRecord.cs" />
     <Compile Include="Extensions\DataRecordExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\DoubleExtensions.cs" />
+    <Compile Include="Extensions\IntExtensions.cs" />
+    <Compile Include="Extensions\MemberInfoExtensions.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\LogLevel.cs" />
+    <Compile Include="Logging\TextWriterLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -55,4 +62,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Import Project="..\Common.targets" />
 </Project>
