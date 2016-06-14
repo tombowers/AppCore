@@ -83,7 +83,7 @@ public enum ProductStatus
 #### Hash a string (base64 encoded SHA1 hash)
 N.B. Shouldn't be used for passwords, which should be salted, and use a more cryptographically secure hashing algorithm.
 ```C#
-var plain = "MySecretPassword";
-var hashed = plain.HashPassword(); // returns "lScpxhyrfgHktfW6e5WDDSB190s="
+var plain = "MySecretText";
+var hashed = plain.Sha1Base64Hash(); // returns "lScpxhyrfgHktfW6e5WDDSB190s="
 ```
 
